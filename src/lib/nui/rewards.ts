@@ -45,8 +45,9 @@ function xpFor(rarity: RarityId, duplicate: boolean): number {
 
 export interface OpenPackRequest {
   packId: string;
-  size?: number;
+  size?: number | undefined;
 }
+
 
 export type OpenPackResponse =
   | { ok: true; result: OpenPackResult }
