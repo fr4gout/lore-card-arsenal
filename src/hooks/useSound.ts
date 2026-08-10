@@ -7,7 +7,7 @@ import { SOUND_PRESETS, type SoundId } from "@/config/audio";
  * Each rarity has its own timbre so reveals are recognisable by ear.
  */
 export function useSound() {
-  const [enabled, setEnabled] = useState(Config.EnableSound);
+  const [enabled, setEnabled] = useState<boolean>(Config.EnableSound);
   const ctxRef = useRef<AudioContext | null>(null);
 
   const context = useCallback((): AudioContext | null => {
